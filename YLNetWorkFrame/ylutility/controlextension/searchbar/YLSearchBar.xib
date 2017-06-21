@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YLSearchBar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvR-WO-7CJ">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="axH-tW-hha">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="fMw-ZH-Slc"/>
+                        <constraint firstAttribute="height" constant="20" id="vFJ-3A-qMj"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Apw-j0-ZlQ">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="ma0-po-vX0"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.94509803920000002" green="0.94901960780000005" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="tvR-WO-7CJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="BHz-h8-Ui0"/>
+                <constraint firstItem="tvR-WO-7CJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="ILM-mh-rol"/>
+                <constraint firstItem="Apw-j0-ZlQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="KFa-Ea-EhY"/>
+                <constraint firstItem="axH-tW-hha" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="Ov4-Ac-4CI"/>
+                <constraint firstAttribute="trailing" secondItem="tvR-WO-7CJ" secondAttribute="trailing" constant="8" id="XXm-pY-OCv"/>
+                <constraint firstItem="axH-tW-hha" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YuD-5j-Rh4"/>
+                <constraint firstAttribute="bottom" secondItem="tvR-WO-7CJ" secondAttribute="bottom" constant="5" id="aMX-z6-uDy"/>
+                <constraint firstItem="Apw-j0-ZlQ" firstAttribute="leading" secondItem="axH-tW-hha" secondAttribute="trailing" constant="6" id="dpR-8b-r7v"/>
+                <constraint firstAttribute="trailing" secondItem="Apw-j0-ZlQ" secondAttribute="trailing" constant="9" id="iGd-AQ-hry"/>
+                <constraint firstAttribute="bottom" secondItem="Apw-j0-ZlQ" secondAttribute="bottom" constant="6" id="ijS-r9-AJt"/>
+                <constraint firstAttribute="bottom" secondItem="axH-tW-hha" secondAttribute="bottom" constant="15" id="q2w-Ov-iiV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backView" destination="tvR-WO-7CJ" id="rRv-8z-0kE"/>
+                <outlet property="icon" destination="axH-tW-hha" id="f4Y-QN-d4N"/>
+                <outlet property="iconContraint" destination="YuD-5j-Rh4" id="zzG-bw-8eu"/>
+                <outlet property="textField" destination="Apw-j0-ZlQ" id="OmB-tR-pkg"/>
+            </connections>
+            <point key="canvasLocation" x="-155" y="12"/>
+        </view>
+    </objects>
+</document>

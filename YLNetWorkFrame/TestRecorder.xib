@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestRecorder">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwT-C6-RJF">
+                    <rect key="frame" x="137" y="127" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="3fM-n4-vDu"/>
+                        <constraint firstAttribute="height" constant="30" id="Skp-bc-Zp2"/>
+                    </constraints>
+                    <state key="normal" title="开始"/>
+                    <connections>
+                        <action selector="OnStartDown:" destination="-1" eventType="touchUpInside" id="5L4-o1-hlv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIh-Ab-AMV">
+                    <rect key="frame" x="137" y="180" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="9cu-yw-PEi"/>
+                        <constraint firstAttribute="width" constant="46" id="f7X-bq-6AZ"/>
+                    </constraints>
+                    <state key="normal" title="停止"/>
+                    <connections>
+                        <action selector="OnStopDown:" destination="-1" eventType="touchUpInside" id="awa-mt-o7E"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcI-7b-bzO">
+                    <rect key="frame" x="136" y="259" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0Za-md-etv"/>
+                        <constraint firstAttribute="width" constant="46" id="4fH-D0-CcJ"/>
+                    </constraints>
+                    <state key="normal" title="播放"/>
+                    <connections>
+                        <action selector="OnPlayDown:" destination="-1" eventType="touchUpInside" id="s5m-WU-DCV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90D-9D-mZW">
+                    <rect key="frame" x="137" y="297" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="aGk-GH-EBc"/>
+                        <constraint firstAttribute="height" constant="30" id="vpl-th-tuY"/>
+                    </constraints>
+                    <state key="normal" title="停播"/>
+                    <connections>
+                        <action selector="OnPlayStopDown:" destination="-1" eventType="touchUpInside" id="FlE-az-VyL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KIh-Ab-AMV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2Yo-86-WG7"/>
+                <constraint firstItem="90D-9D-mZW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4HX-w0-vxg"/>
+                <constraint firstItem="gwT-C6-RJF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="As4-Iq-PiY"/>
+                <constraint firstItem="vcI-7b-bzO" firstAttribute="top" secondItem="KIh-Ab-AMV" secondAttribute="bottom" constant="49" id="BY8-Jy-rvZ"/>
+                <constraint firstItem="gwT-C6-RJF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-98" id="DPE-Gc-KGv"/>
+                <constraint firstItem="KIh-Ab-AMV" firstAttribute="top" secondItem="gwT-C6-RJF" secondAttribute="bottom" constant="23" id="Fzf-DM-3vt"/>
+                <constraint firstItem="vcI-7b-bzO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-1" id="h2L-2P-dAI"/>
+                <constraint firstItem="90D-9D-mZW" firstAttribute="top" secondItem="vcI-7b-bzO" secondAttribute="bottom" constant="8" id="qh5-gf-ken"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>
