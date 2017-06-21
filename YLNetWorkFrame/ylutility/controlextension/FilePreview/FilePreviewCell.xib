@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FilePreviewCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEM-Kd-bs2">
+                        <rect key="frame" x="8" y="8" width="84" height="58"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="lEM-Kd-bs2" secondAttribute="height" multiplier="1:1" constant="6" id="efY-Ur-ykF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="efY-Ur-ykF"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEy-ml-5Ej">
+                        <rect key="frame" x="8" y="76" width="84" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="vjX-dx-sip"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1X-be-c2x">
+                        <rect key="frame" x="99.5" y="0.0" width="0.5" height="99"/>
+                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="qhg-G3-a33"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRE-gT-aCh">
+                        <rect key="frame" x="0.0" y="99" width="100" height="0.0"/>
+                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="1g2-Cc-P5U"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="pRE-gT-aCh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DG9-ml-XbK"/>
+                <constraint firstItem="pEy-ml-5Ej" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="EcA-JZ-X2o"/>
+                <constraint firstItem="G1X-be-c2x" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FAS-D4-vbb"/>
+                <constraint firstAttribute="trailing" secondItem="pEy-ml-5Ej" secondAttribute="trailing" constant="8" id="GCm-8K-06C"/>
+                <constraint firstAttribute="trailing" secondItem="pRE-gT-aCh" secondAttribute="trailing" id="JRm-PI-G2j"/>
+                <constraint firstAttribute="bottom" secondItem="pRE-gT-aCh" secondAttribute="bottom" constant="1" id="KaS-CO-SeP"/>
+                <constraint firstItem="lEM-Kd-bs2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Mqz-Nj-VVY"/>
+                <constraint firstAttribute="bottom" secondItem="G1X-be-c2x" secondAttribute="bottom" constant="1" id="TCJ-Lb-Efo"/>
+                <constraint firstAttribute="trailing" secondItem="G1X-be-c2x" secondAttribute="trailing" constant="0.5" id="TY3-4C-Eab"/>
+                <constraint firstAttribute="trailing" secondItem="lEM-Kd-bs2" secondAttribute="trailing" constant="8" id="ZX9-po-2Yg"/>
+                <constraint firstAttribute="bottom" secondItem="pEy-ml-5Ej" secondAttribute="bottom" constant="8" id="lSa-Zi-udR"/>
+                <constraint firstItem="pEy-ml-5Ej" firstAttribute="top" secondItem="lEM-Kd-bs2" secondAttribute="bottom" constant="10" id="tbK-g4-GAt"/>
+                <constraint firstItem="lEM-Kd-bs2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="x9s-we-Kbt"/>
+            </constraints>
+            <size key="customSize" width="104" height="183"/>
+            <connections>
+                <outlet property="icon" destination="lEM-Kd-bs2" id="AAu-ce-MFq"/>
+                <outlet property="title" destination="pEy-ml-5Ej" id="gmd-4z-DAD"/>
+            </connections>
+            <point key="canvasLocation" x="-145" y="38"/>
+        </collectionViewCell>
+    </objects>
+</document>
